@@ -1,0 +1,492 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Source Sans 3', sans-serif;
+    text-decoration: none;
+}
+
+header{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #fff;
+}
+
+/*HEADER SUPERIOR*/
+
+.header__superior{
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.logo img{
+    width: 150px;
+}
+
+.search input{
+    width: 300px;
+    padding: 10px;
+}
+
+/*BARRA MENU*/
+
+.container__menu{
+    width: 100%;
+    height: 70px;
+    background: #023877;
+    padding: 0px 20px;
+}
+
+.menu{
+    max-width: 1200px;
+    margin: auto;
+    height: 100%;
+}
+
+nav{
+    height: 100%;
+}
+
+nav > ul{
+    height: 100%;
+    display: flex;
+}
+
+nav ul li{
+    height: 100%;
+    list-style: none;
+    position: relative;
+}
+
+nav > ul > li:first-child > a{
+    background-image: url(/icon\ svg\ to\ png\ house.PNG);
+    background-size: 24px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    padding: 20px 40px;
+}
+
+nav > ul > li:first-child:hover > a{
+    background-image: url(/icon\ svg\ to\ png\ house.PNG);
+    background-size: 24px;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+nav > ul > li > a{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 14px;
+    color: white;
+    text-transform: uppercase;
+    font-size: 14px;
+    transition: all 300ms ease;
+}
+
+nav > ul > li > a:hover{
+    transform: scale(1.1);
+    background: #0074C7;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+}
+
+#selected{
+    transform: scale(1.1);
+    background-color: #0074C7;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+}
+
+
+/*SUBMENU*/
+
+nav ul li ul{
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    position: absolute;
+    top: 90px;
+    left: -5px;
+    padding: 14px 0px;
+    visibility: hidden;
+    opacity: 0;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+    z-index: 10;
+    transition: all 300ms ease;
+}
+
+nav ul li:hover ul{
+    visibility: visible;
+    opacity: 1;
+    top: 70px;
+}
+
+nav ul li ul:before{
+    content: '';
+    width: 0;
+    height: 0;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-bottom: 12px solid white;
+    position: absolute;
+    top: -12px;
+    left: 20px;
+}
+
+nav ul li ul li a{
+    display: block;
+    color: #0099E9;
+    padding: 6px;
+    padding-left: 14px;
+    margin-top: 10px;
+    font-size: 14px;
+    text-transform: uppercase;
+    transition: all 300ms ease;
+}
+
+nav ul li ul li a:hover{
+    background: #0074C7;
+    color: #fff;
+    transform: scale(1.2);
+    padding-left: 30px;
+    font-size: 14px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+}
+
+/*ARTICULO*/
+
+main{
+    background: #f0f0f0;
+    padding: 40px 20px;
+    margin-top: 200px;
+    width: 100%;
+    max-width: 1200px;
+}
+
+
+
+/*ELEMENTOS RESPONSIVOS*/
+
+.icon__menu{
+    font-size: 26px;
+    color: white;
+    cursor: pointer;
+    width: 26px;
+    height: 100%;
+    display: none;
+    align-items: center;
+}
+
+#label__check{
+    width: 26px;
+    height: 100%;
+    display: none;
+}
+
+#check__menu{
+    display: none;
+}
+
+@media screen and (max-width: 720px){
+
+
+    .header__superior{
+        padding: 10px;
+    }
+
+    .logo img{
+        width: 100px;
+    }
+
+    nav > ul{
+        flex-direction: column;
+        background-color: #023877;
+        position: fixed;
+        left: 0;
+        top: 158px;
+        width: 100%;
+        height: 0px;
+        transition: all 300ms ease;
+        z-index: 100;
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    nav > ul > li > a:hover{
+        transform: scale(1);
+    }
+
+    nav ul li ul{
+        left: 90px;
+    }
+
+    nav > ul > li:hover ul{
+        top: 50px;
+    }
+
+    nav > ul > li:first-child a{
+        background-position: 20px;
+    }
+
+    #selected{
+        transform: scale(1);
+    }
+
+    #label__check{
+        display: block;
+    }
+
+    .icon__menu{
+        display: flex;
+    }
+
+    #check__menu:checked ~ nav > ul{
+        height: 300px;
+        visibility: visible;
+        opacity: 1;
+    }
+
+    main{
+        margin-top: 158px;
+    }
+} 
+/*direccion*/
+.main_all{
+    width: 100%;
+    max-width: 1200px;
+    height:100%;
+    margin: 200px auto 0px;
+    overflow: hidden;
+}
+.servicioalcliente{
+    width: 100%;
+    height: auto; 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.servicioalcliente .ubication{
+    width: 600px;
+    height: 450px;
+    font-family: 'poppins';
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+}
+.servicioalcliente .ubication h2{
+    color: rgb(134, 88, 67);
+    font-size: 30px;
+}
+.ubication div{
+    margin: 10px 0px;
+}
+.ubication div h3{
+    font-size: 20px;
+    color: gray;
+}
+.ubication div h4{
+    font-size: 20px;
+    color: gray;
+}
+.ubication h5{
+    font-size: 20px;
+    color: gray;
+}
+.ubication span{
+    font-size: 18px;
+    color: rgb(65, 65, 175);
+    cursor: pointer;
+}
+.icon_whatsapp{
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    display: block;
+    bottom: 10px;
+    position: fixed;
+    right:10px;
+}
+.icon_whatsapp:active{
+    transform: scale(0.9);
+}
+.mapa .map{
+    width: 600px;
+    height: 450px;
+}
+.form_wts{
+    width: 220px;
+    height: 280px;
+    background: rgb(109, 105, 99);
+    position: fixed;
+    bottom: 80px ;
+    right: 50px;
+    box-shadow: 8 2px 20px 8 rgba(0, 8, 8, 0.22);
+    border-radius: 5px;
+    padding: 10px;
+    display: none;
+}
+.form_wts p{
+    text-align: center;
+    font-family: 'poppins';
+}
+.entrar_y_salir{
+    display: block;
+}
+.inputwts{
+    width: 100%;
+    padding: 5px;
+    color: rgb(3, 3, 3);
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, .19);
+}
+.inputwts:focus{
+    outline: none;
+}
+.texttarea{
+    width: 100%;
+    max-width: 100%;
+    min-width: 100%;  
+    height: 120px;
+    min-height: 120px;
+    max-height: 120px;
+    padding: 5px;
+    color: #666;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, .19);
+
+
+}
+.texttarea:focus{
+    outline: none;
+}
+
+.btn_wts{
+    width: 100%;
+    background: green;
+    border: none;
+    color: white;
+    border-radius: 5px;
+}
+
+/*I have just finished with the whole main and i would like to begin coding the footer in order to complete my web page*/
+
+/*footer*/
+.footer_all{
+    width: 100%;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+}
+.footer_container{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  background: rgb(49, 49, 46);
+}
+.container_footer_card{
+    width: 400px;
+    height: 600px;
+    padding: 20px;
+    margin: auto;
+}
+.container_footer_card h2{
+    text-align: center;
+    font-size: 25px;
+    color: white;
+    margin-bottom: 20px;
+}
+.container_footer_card .business{
+    text-align: justify;
+    font-family: poppins;
+    letter-spacing: .2em;
+    margin-top: 60px;
+    color: white;
+}
+.RS h2{
+    text-align: center;
+    font-size: 25px;
+    color: white;
+    margin-bottom: 60px;
+
+}
+.RS{
+    width: 400px;
+    height: 600px;
+    padding: 20px;
+    margin: auto;
+}
+.RS_container{
+    display: flex;
+    justify-content: space-around;
+}
+.redes_sociales{
+    margin: 30px;
+}
+.RS .redes_sociales a{
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    cursor: pointer;
+}
+.RS .redes_sociales img{
+    width: 50px;
+}
+
+/*I am Going to make direction's design*/
+.contact{
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+}
+.direction{
+    display: flex;
+    color: white;
+    justify-content: space-around;
+    margin-top: 60px;
+}
+.direction img{
+    width: 50px;
+}
+.Whatsapp{
+    display: flex;
+    color: white;
+    justify-content: space-around;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}  
+.Whatsapp img{
+    width: 50px;
+}
+.Telegram{
+    display: flex;
+    color: white;
+    justify-content: space-around;
+}
+.Telegram img{
+    width: 50px;
+}
+
+/*last footer*/
+
+.footer_below{
+    display: flex;
+    justify-content: space-between;
+    background: rgb(14, 13, 13);
+    color: white;
+    font-family: poppins;
+    padding: 20px;
+}
