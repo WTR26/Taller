@@ -337,7 +337,7 @@ section.container_text p{
     padding: 10px;
 }
 .Container_below_cards .People video{
-    width:400px ;
+    width:300px ;
     border-radius: 50%;
     box-shadow: .1px 1px 10px 1px rgb(204, 41, 177);
 }
@@ -360,7 +360,7 @@ section.container_text p{
     padding: 10px;
 }
 .ideas img{
-    width: 400px;
+    width: 300px;
     border-radius: 50%;
     box-shadow: .1px 1px 10px 1px rgb(2, 12, 59);
 }
@@ -397,7 +397,7 @@ section.container_text p{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-  background: rgb(49, 49, 46);
+    background-image: url(../images/background\ to\ my\ footer.png);
 }
 .container_footer_card{
     width: 400px;
